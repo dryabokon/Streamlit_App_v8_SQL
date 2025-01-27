@@ -2,4 +2,4 @@
 LLM with BQ and Streamlit
 
 
-![alt text](/app/image4.png)
+![alt text](/app/Image4.png)
