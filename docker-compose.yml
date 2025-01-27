@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  app-sql:
+    container_name: app-sql
+    restart: always
+    build: ./app
+    ports:
+      - 8508:8508
+    command: streamlit run app.py --server.port 8508
+
+  nginx-chat:
+    container_name: nginx-sql
+    restart: always
+    build: ./nginx
+    depends_on:
+      - app-sql
